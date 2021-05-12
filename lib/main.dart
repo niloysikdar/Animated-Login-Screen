@@ -1,7 +1,9 @@
 import 'package:animated_login_screen/screens/create_account.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -11,7 +13,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
+        ).apply(
+          bodyColor: Colors.white,
+          displayColor: Colors.white,
+        ),
         primarySwatch: Colors.blue,
+        primaryColor: Colors.white,
       ),
       home: CreateAccount(),
     );
