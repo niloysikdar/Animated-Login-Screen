@@ -1,4 +1,5 @@
 import 'package:animated_login_screen/constants/colors.dart';
+import 'package:animated_login_screen/widgets/rocket.dart';
 import 'package:flutter/material.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -22,6 +23,7 @@ class _CreateAccountState extends State<CreateAccount> {
             children: [
               SizedBox(height: topPadding),
               SizedBox(height: 10),
+              RocketWidget(),
             ],
           ),
         ),
