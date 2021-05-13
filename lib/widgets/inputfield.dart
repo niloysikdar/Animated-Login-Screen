@@ -14,7 +14,7 @@ class CustomInputField extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: 25,
-        vertical: 15,
+        vertical: 10,
       ),
       child: TextFormField(
         cursorColor: Colors.black,

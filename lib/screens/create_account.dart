@@ -40,6 +40,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   prefixIcon: Icons.security_outlined,
                   obscureText: true,
                 ),
+                SizedBox(height: 15),
                 createButton(),
               ],
             ),
