@@ -1,5 +1,6 @@
 import 'package:animated_login_screen/constants/colors.dart';
 import 'package:animated_login_screen/widgets/create_account_headline.dart';
+import 'package:animated_login_screen/widgets/create_button.dart';
 import 'package:animated_login_screen/widgets/inputfield.dart';
 import 'package:animated_login_screen/widgets/rocket.dart';
 import 'package:flutter/material.dart';
@@ -39,6 +40,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   prefixIcon: Icons.security_outlined,
                   obscureText: true,
                 ),
+                createButton(),
               ],
             ),
           ),
