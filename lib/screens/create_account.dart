@@ -30,6 +30,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 RocketWidget(),
                 SizedBox(height: 10),
                 CreateHeadline(),
+                SizedBox(height: 20),
                 CustomInputField(
                   hintText: "Username",
                   prefixIcon: Icons.account_circle_outlined,
@@ -41,7 +42,25 @@ class _CreateAccountState extends State<CreateAccount> {
                   obscureText: true,
                 ),
                 SizedBox(height: 15),
-                createButton(),
+                createButton(
+                  color: signupDarkPurple,
+                  text: "Create an Account",
+                ),
+                SizedBox(height: 15),
+                Text(
+                  "Or",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1,
+                  ),
+                ),
+                SizedBox(height: 15),
+                createButton(
+                  color: Colors.white54.withOpacity(0.25),
+                  text: "Log In",
+                ),
+                SizedBox(height: 30),
               ],
             ),
           ),
