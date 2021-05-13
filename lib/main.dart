@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           bodyColor: Colors.white,
           displayColor: Colors.white,
         ),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
         primaryColor: Colors.white,
       ),
       home: CreateAccount(),
