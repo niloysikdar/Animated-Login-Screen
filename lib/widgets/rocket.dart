@@ -29,8 +29,8 @@ class _RocketWidgetState extends State<RocketWidget>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override

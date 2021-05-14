@@ -1,38 +1,33 @@
 import 'package:animated_login_screen/constants/colors.dart';
-import 'package:animated_login_screen/screens/login.dart';
+import 'package:animated_login_screen/screens/create_account.dart';
 import 'package:animated_login_screen/widgets/create_account_headline.dart';
 import 'package:animated_login_screen/widgets/create_button.dart';
 import 'package:animated_login_screen/widgets/inputfield.dart';
-import 'package:animated_login_screen/widgets/rocket.dart';
 import 'package:flutter/material.dart';
 
-class CreateAccount extends StatefulWidget {
-  @override
-  _CreateAccountState createState() => _CreateAccountState();
-}
-
-class _CreateAccountState extends State<CreateAccount> {
+class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final topPadding = MediaQuery.of(context).padding.top;
-    return Container(
-      decoration: BoxDecoration(
-        gradient: signupPurpleGradient,
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: SizedBox(
-          width: double.infinity,
-          child: SingleChildScrollView(
+    return Scaffold(
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: loginPurpleGradient,
+        ),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: topPadding),
-                SizedBox(height: 10),
-                RocketWidget(),
-                SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: Image.asset("assets/images/person_&_dog.png"),
+                ),
                 CreateHeadline(
-                  text1: "Hi there!",
-                  text2: "Let's Get Started",
+                  text1: "Welcome Back!",
+                  text2: "Please, Log In",
                 ),
                 SizedBox(height: 20),
                 CustomInputField(
@@ -47,8 +42,8 @@ class _CreateAccountState extends State<CreateAccount> {
                 ),
                 SizedBox(height: 15),
                 createButton(
-                  color: signupDarkPurple,
-                  text: "Create an Account",
+                  color: loginDarkPurple,
+                  text: "Continue >",
                 ),
                 SizedBox(height: 15),
                 Text(
@@ -65,16 +60,16 @@ class _CreateAccountState extends State<CreateAccount> {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LoginScreen(),
+                        builder: (context) => CreateAccount(),
                       ),
                     );
                   },
                   child: createButton(
                     color: Colors.white54.withOpacity(0.25),
-                    text: "Log In",
+                    text: "Create an Account",
                   ),
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
               ],
             ),
           ),
