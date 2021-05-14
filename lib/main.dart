@@ -1,4 +1,4 @@
-import 'package:animated_login_screen/screens/login.dart';
+import 'package:animated_login_screen/screens/create_account.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         primaryColor: Colors.white,
       ),
-      home: LoginScreen(),
+      home: CreateAccount(),
     );
   }
 }

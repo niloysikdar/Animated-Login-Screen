@@ -1,4 +1,5 @@
 import 'package:animated_login_screen/constants/colors.dart';
+import 'package:animated_login_screen/screens/login.dart';
 import 'package:animated_login_screen/widgets/create_account_headline.dart';
 import 'package:animated_login_screen/widgets/create_button.dart';
 import 'package:animated_login_screen/widgets/inputfield.dart';
@@ -59,9 +60,19 @@ class _CreateAccountState extends State<CreateAccount> {
                   ),
                 ),
                 SizedBox(height: 15),
-                createButton(
-                  color: Colors.white54.withOpacity(0.25),
-                  text: "Log In",
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginScreen(),
+                      ),
+                    );
+                  },
+                  child: createButton(
+                    color: Colors.white54.withOpacity(0.25),
+                    text: "Log In",
+                  ),
                 ),
                 SizedBox(height: 30),
               ],

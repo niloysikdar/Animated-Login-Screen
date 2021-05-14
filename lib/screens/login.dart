@@ -1,4 +1,5 @@
 import 'package:animated_login_screen/constants/colors.dart';
+import 'package:animated_login_screen/screens/create_account.dart';
 import 'package:animated_login_screen/widgets/create_account_headline.dart';
 import 'package:animated_login_screen/widgets/create_button.dart';
 import 'package:animated_login_screen/widgets/inputfield.dart';
@@ -54,9 +55,19 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 15),
-                createButton(
-                  color: Colors.white54.withOpacity(0.25),
-                  text: "Create an Account",
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CreateAccount(),
+                      ),
+                    );
+                  },
+                  child: createButton(
+                    color: Colors.white54.withOpacity(0.25),
+                    text: "Create an Account",
+                  ),
                 ),
                 SizedBox(height: 20),
               ],
